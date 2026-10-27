@@ -13,6 +13,10 @@ load_dotenv()
 def root():
     return {"message": "Сервис работает"}
 
+@app.get("/version")
+def get_version():
+    return {"version":"0.1.0"}
+
 
 @app.get("/health")
 def health():
