@@ -34,3 +34,14 @@ def info():
         "author": app_author,
     }
 
+@app.get("/books")
+def get_books():
+    return ["Введение в алгоритмы", "Чистый код", "Грокаем алгоритмы"]
+
+@app.get("/books/{book_id}")
+def get_book(book_id: int):
+    books = ["Введение в алгоритмы", "Чистый код", "Грокаем алгоритмы"]
+    if 1 <= book_id <= len(books):
+        return books[book_id - 1]
+    return "Книга не найдена"
+
