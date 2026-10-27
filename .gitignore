@@ -1,3 +1,4 @@
-1 test-env
-2 venv
-3 .env
+venv/
+.env
+__pycache__/
+*.pyc
